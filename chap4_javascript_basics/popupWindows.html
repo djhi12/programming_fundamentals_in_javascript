@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Windows</title>
+</head>
+
+<body>
+    <button type="button" onclick="greetUser()">Hello</button>
+    <script>
+        "use strict";
+        /*
+         * Defining table
+         * Input: A person's name
+         * Processing: Creating a greeting for that person
+         * Output: The greeting
+         */
+
+        function greetUser() {
+            // This line prompts the user to type in his name.
+            let name = prompt('Please enter your name');
+
+            // Create a personalized greeting for the user.
+            let greeting = `Hello ${name}. I hope you are well today.`;
+
+            alert(greeting);
+        }
+    </script>
+</body>
+
+</html>
