@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Fields and Division</title>
+    <title>Scripture Verse</title>
 </head>
 
 <body>
-    <!-- Example 3 -->
-    
     <label for="nameInputBox">Please enter your name:</label>
     <input type="text" id="nameInputBox" name="nameInputBox">
     <button type="button" onclick="applyScripture()">Verse</button>
@@ -33,7 +31,8 @@
 
             // Use string concatenation to create a verse 
             // of scripture personalized for the user.
-            let scripture = `I, ${name}, having been born of goodly parents, therefore I was taught somewhat in all the learning of my father.`;
+            let scripture =
+                `I, ${name}, having been born of goodly parents, therefore I was taught somewhat in all the learning of my father.`;
 
             // Display the scripture in the div that has the id "outputDiv"
             document.getElementById('outputDiv').innerHTML = scripture;

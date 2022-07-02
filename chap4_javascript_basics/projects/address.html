@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+</head>
+
+<body>
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <br>
+    <br>
+    <!-- Street -->
+    <label for="street">Street:</label>
+    <input type="text" id="street" name="street">
+
+    <br>
+    <br>
+    <!-- City -->
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city">
+
+    <br>
+    <br>
+    <!-- State -->
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state">
+
+    <br>
+    <br>
+    <!-- Zip code -->
+    <label for="zipCode">Zip code:</label>
+    <input type="text" id="zipCode" name="zipCode">
+
+    <br>
+    <br>
+    <!-- Button -->
+    <button type="button" onclick="makeAddress()">Make Address</button>
+
+    <div id="output"></div>
+
+    <script>
+        "use strict";
+
+        function makeAddress() {
+
+            const name = document.getElementById('name').value;
+            const street = document.getElementById('street').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zipCode = document.getElementById('zipCode').value;
+
+            const address = `${name} \n ${street} \n ${city} \n ${state} \n ${zipCode}`;
+            
+            document.getElementById('output').innerHTML = address;
+        }
+    </script>
+</body>
+
+</html>
