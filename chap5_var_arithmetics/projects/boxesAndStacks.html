@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of Boxes in each Stack</title>
+</head>
+
+<body>
+    <h1>Number of boxes in each stack</h1>
+    <h2>Instruction</h2>
+    <p>An employee at a grocery store must frequently place boxes of cans in stacks. Write a defining table and a program that allows him to enter the total number of boxes and the number of boxes he will place in each stack. Your program must output the number of stacks he will have to make. All of the stacks except the last one must have the exact number of boxes that the employee specifies. The last stack must have the exact number or fewer boxes. For example, if the employee enters 74 total boxes and 6 boxes in each stack your program must output 13. </p>
+
+    <!-- Total of Boxes-->
+    <label for="totalBoxes">Total Boxes:</label>
+    <input type="text" id="totalBoxes" name="totalBoxes">
+
+    <br>
+    <br>
+    <!-- Boxes in each Stack -->
+    <label for="stack">Boxes in each stack:</label>
+    <input type="text" id="stack" name="stack">
+
+    <br>
+    <br>
+    <button type="button" onclick="numOfStacks()">Number of Stacks</button>
+    <div id="output"></div>
+
+    <script>
+        "use strict";
+
+        function numOfStacks() {
+            // Total Boxes
+            const totalBoxes = parseInt(document.getElementById('totalBoxes').value);
+
+            // Boxes in each stack
+            const stack = parseFloat(document.getElementById('stack').value);
+
+            // computation
+            let numOfStack = totalBoxes / stack;
+
+            // increment by 1
+            numOfStack++;
+
+            document.getElementById('output').innerHTML = numOfStack.toFixed(0);
+        }
+    </script>
+</body>
+
+</html>
