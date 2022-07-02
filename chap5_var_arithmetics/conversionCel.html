@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Fahrenheit to Celcius</title>
+</head>
+
+<body>
+    <label for="temp">Enter a temperature in Fahrenheit:</label>
+    <input type="text" id="temp" name="temp">
+    <button type="button" onclick="fahrToCel()">Temp</button>
+    <div id="output"></div>
+
+    <script>
+        "use strict"
+
+        /*
+         * Input: a temperature in celcius
+         * Processing: convert the temperature from Celcius to Fahrenheit
+         * Output: the temperature converted to Fahrenheit
+         */
+
+        function fahrToCel() {
+            // Read a Celcius temperature from the user.
+            let fahrenheit = parseFloat(document.getElementById('temp').value);
+
+            // Convert the Celcius temperature into Fahrenheit
+            let celcius = 5 / 9 * (fahrenheit - 32) ;
+
+            let output = document.getElementById('output');
+            output.innerHTML = celcius;
+        }
+    </script>
+</body>
+
+</html>
