@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarts to Liter Convertion</title>
+</head>
+
+<body>
+    <!-- Quarts -->
+    <label for="quarts">Quarts:</label>
+    <input type="text" id="quarts" name="quarts">
+
+    <button type="button" onclick="liter()">Volume</button>
+    <div id="output"></div>
+    <script>
+        "use strict";
+
+        function liter() {
+            // Ask the user for volume in quarts.
+            const quarts = parseFloat(document.getElementById('quarts').value);
+
+            // Liter per Quart
+            const liter = 0.9463531;
+
+            // Computation
+            const liters = quarts * liter;
+
+            document.getElementById('output').innerHTML = `${liters.toFixed(2)} liters`;
+
+        }
+    </script>
+</body>
+
+</html>

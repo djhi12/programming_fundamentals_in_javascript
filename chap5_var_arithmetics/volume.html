@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume</title>
+</head>
+
+<body>
+    <!-- Radius -->
+    <label for="radius">Radius:</label>
+    <input type="text" id="radius" name="radius">
+
+    <br>
+    <br>
+    <!-- Height -->
+    <label for="height">Height:</label>
+    <input type="text" id="height" name="height">
+
+    <br>
+    <br>
+    <button type="button" onclick="volume()">Volume</button>
+
+    <div id="output"></div>
+    
+    <script>
+        "use strict";
+        /*
+         * Input: radius and height of a cylinder
+         * Processing: Calculate the volume of the cylinder.
+         * Output: the volume 
+         */
+
+        function volume() {
+            // Get the radius and height form the user.
+            const radius = parseFloat(document.getElementById('radius').value);
+            const height = parseFloat(document.getElementById('height').value);
+
+            // Compute the volume of the cylinder.
+            const volume = Math.PI * radius * radius * height;
+
+            // Display the volume to the user.
+            document.getElementById('output').innerHTML = volume;
+        }
+    </script>
+</body>
+
+</html>
