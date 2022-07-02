@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilometers to Miles Conversion</title>
+</head>
+
+<body>
+    <h1>Kilometers to Miles Conversion</h1>
+
+    <!-- Kilometers -->
+    <label for="kilometers">Kilometers:</label>
+    <input type="text" id="kilometers" name="kilometers">
+
+    <button type="button" onclick="miles()">Miles</button>
+    <div id="output"></div>
+
+    <script>
+        "use strict";
+
+        function miles() {
+
+            // Ask the user for Kilometers
+            const kilometers = parseFloat(document.getElementById('kilometers').value);
+
+            // Mile per 1 kilometer
+            const miles = 0.621371;
+
+            // Convert
+            const convert = kilometers * miles;
+
+            document.getElementById('output').innerHTML = `${convert} miles`;
+        }
+    </script>
+</body>
+
+</html>
