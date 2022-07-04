@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        let registerDate;
+        let classStanding = 'z';
+
+        switch (classStanding) {
+            case 'f':
+                registerDate = 'Nov 23';
+                break;
+            case 's':
+                registerDate = 'Nov 17';
+                break;
+            case 'j':
+                registerDate = 'Nov 12';
+                break;
+            case 'n':
+                registerDate = 'Nov 6';
+                break;
+            default:
+                registerDate = 'none';
+                break;
+        }
+
+        console.log(registerDate);
+    </script>
+</body>
+
+</html>
