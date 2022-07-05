@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Autopia Driver</title>
+</head>
+
+<body>
+    <label for="driver">Driver's height:</label>
+    <input type="text" id="driver" name="driver">
+    <br>
+    <br>
+    <label for="passenger">Passenger's height:</label>
+    <input type="text" id="passenger" name="passenger">
+    <br>
+    <button type="button" onclick="checkHeight()">Height</button>
+    <div id="output"></div>
+
+    <script>
+        "use strict";
+
+        /**
+         * Input:
+         * Processing:
+         * Ouput:
+         */
+
+        function checkHeight() {
+            const driver = parseFloat(document.getElementById('driver').value);
+            const passenger = parseFloat(document.getElementById('passenger').value);
+
+            let message;
+
+            if (driver >= 54 || (driver >= 32 && passenger >= 54)) {
+                message = 'Enjoy the ride!';
+            } else {
+                message =
+                    'Sorry, to drive a car on the Autopia you must be atleast 54 inches tall or atleast 32 inches tall and accompanied by a passenger who is atleast 54 inches tall.'
+            }
+
+            document.getElementById('output').innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>

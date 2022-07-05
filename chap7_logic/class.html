@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Which Class</title>
 </head>
+
 <body>
+    <label for="age">Age:</label>
+    <input type="text" id="age" for="age">
+    <br>
+    <br>
+    <button type="button" onclick="chooseClass()">Class</button>
+    <div id="output"></div>
     <script>
         "use strict";
 
-        
+        /**
+         * Input: A girl's age
+         * Processing: If statements to choose a class
+         * Output: Name of the class
+         */
+
+        function chooseClass() {
+            const age = parseFloat(document.getElementById('age').value);
+
+            let group;
+
+            if (age <= 11) {
+                group = 'Primary';
+            } else if (age == 12 || age == 13) {
+                group = 'Beehive';
+            } else if (age == 14 || age == 15) {
+                group = 'Mia Maid';
+            } else if (age == 16 || age == 17) {
+                group = 'Laurel';
+            } else {
+                group = 'Relief Society'
+            }
+
+            document.getElementById('output').innerHTML = group;
+        }
     </script>
 </body>
+
 </html>
