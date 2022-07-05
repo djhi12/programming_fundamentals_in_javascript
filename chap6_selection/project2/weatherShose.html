@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Shoes</title>
+    <style>
+        main {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th {
+            padding: 10px;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Problem</h1>
+        <p>Write a defining table and a program that helps a user choose the correct foot wear for the day's weather.
+            The following table shows the weather types the user may enter and what your program should output.</p>
+        <table>
+            <tr>
+                <th>Weather</th>
+                <th>Foot Wear</th>
+            </tr>
+            <tr>
+                <td>hot</td>
+                <td>sandals</td>
+            </tr>
+            <tr>
+                <td>rain</td>
+                <td>galoshes</td>
+            </tr>
+            <tr>
+                <td>snow</td>
+                <td>boots</td>
+            </tr>
+        </table>
+        <br>
+
+        <label for="shoes">Type of shoes:</label>
+        <input type="text" id="shoes" name="shoes">
+        <br>
+        <button type="button" onclick="weatherShoes()">Weather</button>
+        <div id="output"></div>
+    </main>
+    <script>
+        "use strict";
+
+        function weatherShoes() {
+            const shoes = document.getElementById('shoes').value;
+
+            let weather;
+            if (shoes == 'sandals') {
+                weather = 'hot';
+            } else if (shoes == 'galoshes') {
+                weather = 'rain';
+            } else if (shoes == 'boots') {
+                weather = 'snow';
+            } else {
+                weather = 'shoes';
+            }
+
+            document.getElementById('output').innerHTML = weather;
+        }
+    </script>
+</body>
+
+</html>

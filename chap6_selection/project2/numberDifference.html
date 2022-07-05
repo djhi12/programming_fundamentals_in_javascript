@@ -93,25 +93,25 @@
                 let numTwo = parseFloat(document.getElementById('numTwo').value);
 
                 let output;
-                    // 6 & 8 = 2
-                if (numOne < numTwo) {
-                    output = Math.abs(numOne - numTwo);
-                    // 8 & 6 = 2
-                } else if (numOne > numTwo) {
-                    output = numOne % numTwo;
-                    // -3 & 5 = 8
-                } else if (-numOne < numTwo) {
-                    output = Math.abs(numOne) + numTwo;
-                    // 5 & -3 = 8
-                } else if (Math.abs(numOne) > Math.abs(-numTwo)) {
-                    output = numOne + numTwo; // 2
-                    // -7 & -4 = 3
-                } else if (-numOne < -numTwo) {
-                    output = numOne % numTwo;
-                    // -4 & -7 = 3
-                } else if (-numOne > -numTwo) {
-                    output = Math.abs(numOne + numTwo); // -4
-                }
+                //     // 6 & 8 = 2
+                // if (numOne < numTwo) {
+                //     output = Math.abs(numOne - numTwo);
+                //     // 8 & 6 = 2
+                // } else if (numOne > numTwo) {
+                //     output = numOne % numTwo;
+                //     // -3 & 5 = 8
+                // } else if (-numOne < numTwo) {
+                //     output = Math.abs(numOne) + numTwo;
+                //     // 5 & -3 = 8
+                // } else if (numOne > numTwo) {
+                //     output = numOne + numTwo; // 2
+                //     // -7 & -4 = 3
+                // } else if (-numOne < -numTwo) {
+                //     output = numOne % numTwo;
+                //     // -4 & -7 = 3
+                // } else if (-numOne > -numTwo) {
+                //     output = Math.abs(numOne + numTwo); // -4
+                // }
                 document.getElementById('output').innerHTML = output;
             }
         </script>
