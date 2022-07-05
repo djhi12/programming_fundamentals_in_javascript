@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Price</title>
+</head>
+
+<body>
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age">
+
+    <br>
+    <br>
+    <label for="gamesAttended">Games Attended:</label>
+    <input type="text" id="gamesAttended" name="gamesAttended">
+
+    <br>
+    <button type="button" onclick="ticketPrice()">Ticket Price</button>
+
+    <div id="output"></div>
+    <script>
+        "use strict";
+
+        /**
+         * Input: A person's age and the number of games that person has attended.
+         * Processing: Determine the price to charge that person for a ticket to a game
+         * Output: The ticket price
+         */
+
+        function ticketPrice() {
+            let age = parseFloat(document.getElementById('age').value);
+            let gamesAttended = parseFloat(document.getElementById('gamesAttended').value);
+
+            let price;
+
+            if (age < 18 && gamesAttended < 6) {
+                price = 8.0;
+            } else if (age < 18 && gamesAttended < 11) {
+                price = 6.0;
+            } else {
+                price = 5.0;
+            }
+
+            document.getElementById('output').innerHTML = price;
+        }
+    </script>
+</body>
+
+</html>

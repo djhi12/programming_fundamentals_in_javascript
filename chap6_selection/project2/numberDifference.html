@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Difference</title>
+
+    <style>
+        main {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th {
+            padding-left: 10px;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Problem</h2>
+        <p>Write a defining table and then a program that computes and outputs the absolute difference between two
+            numbers entered by a user. In other words, your program should always show the difference as a positive
+            number.</p>
+        <p><b>Examples:</b></p>
+        <table>
+            <tr>
+                <th>Number 1</th>
+                <th>Number 2</th>
+                <th>Output</th>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>8</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>6</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>-3</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>-3</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>-7</td>
+                <td>-4</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>-4</td>
+                <td>-7</td>
+                <td>3</td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <label for="numOne">Number 1:</label>
+        <input type="numOne" id="numOne" name="numOne">
+
+        <br>
+        <br>
+        <label for="numTwo">Number 2:</label>
+        <input type="text" id="numTwo" name="numTwo">
+
+        <br>
+        <br>
+        <button type="button" onclick="difference()">Result</button>
+
+        <div id="output"></div>
+
+        <script>
+            "use strict";
+
+            function difference() {
+                let numOne = parseFloat(document.getElementById('numOne').value);
+                let numTwo = parseFloat(document.getElementById('numTwo').value);
+
+                let output;
+                    // 6 & 8 = 2
+                if (numOne < numTwo) {
+                    output = Math.abs(numOne - numTwo);
+                    // 8 & 6 = 2
+                } else if (numOne > numTwo) {
+                    output = numOne % numTwo;
+                    // -3 & 5 = 8
+                } else if (-numOne < numTwo) {
+                    output = Math.abs(numOne) + numTwo;
+                    // 5 & -3 = 8
+                } else if (Math.abs(numOne) > Math.abs(-numTwo)) {
+                    output = numOne + numTwo; // 2
+                    // -7 & -4 = 3
+                } else if (-numOne < -numTwo) {
+                    output = numOne % numTwo;
+                    // -4 & -7 = 3
+                } else if (-numOne > -numTwo) {
+                    output = Math.abs(numOne + numTwo); // -4
+                }
+                document.getElementById('output').innerHTML = output;
+            }
+        </script>
+    </main>
+</body>
+
+</html>
