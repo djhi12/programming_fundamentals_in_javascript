@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month</title>
+
+    <style>
+        main {
+            max-width: 500px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Problem</h1>
+        <p>Write a defining table and a program that asks the user to enter a month name (January, February, etc.) and
+            then
+            outputs the number of days in the month. For February, output “28 or 29 days”.</p>
+        <br>
+        <label for="month">Type month:</label>
+        <input type="text" id="month" name="month">
+        <br>
+        <button type="button" onclick="month()">Month</button>
+        <div id="output"></div>
+    </main>
+    <script>
+        "use strict";
+
+        function month() {
+
+            const month = document.getElementById('month').value;
+
+            let days;
+            if (month == 'January' || month == 'january' || month == 'JANUARY') {
+                days = '31 days';
+            } else if (month == 'February' || month == 'february' || month == 'FEBRUARY') {
+                days = '28 or 29 days';
+            } else if (month == 'March' || month == 'march' || month == 'MARCH') {
+                days = '31 days';
+            } else if (month == 'April' || month == 'april' || month == 'APRIL') {
+                days == '30 days';
+            } else if (month == 'May' || month == 'may' || month == 'MAY') {
+                days = '31 days';
+            } else if (month == 'June' || month == 'June' || month == 'JUNE') {
+                days = '30 days';
+            } else if (month == 'July' || month == 'July' || month == 'JULY') {
+                days = '31 days';
+            } else if (month == 'August' || month == 'august' || month == 'AUGUST') {
+                days == '30 days';
+            } else if (month == 'September' || month == 'september' || month == 'SEPTEMBER') {
+                days = '31 days';
+            } else if (month == 'October' || month == 'october' || month == 'OCTOBER') {
+                days = '30 days';
+            } else if (month == 'November' || month == 'november' || month == 'NOVEMBER') {
+                days = '31 days';
+            } else if (month == 'December' || month == 'december' || month == 'DECEMBER') {
+                days = '30 days';
+            } else {
+                days = 'Type the correct name of month.'
+            }
+
+            document.getElementById('output').innerHTML = days;
+        }
+    </script>
+</body>
+
+</html>
