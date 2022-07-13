@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For-in Loop</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        // The JavaScript for in statement loops through the properties of an Object (w3schools):
+        const person = {
+            fName: 'Daniel John',
+            lName: 'Idorot',
+            age: 26
+        };
+
+        let txt = '';
+        for (let Name in person) {
+            txt += person[Name] + ' ';
+        }
+
+        console.log(txt);
+    </script>
+</body>
+
+</html>
