@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest</title>
+</head>
+
+<body>
+
+    <label for="balance">Balance:</label>
+    <input type="text" id="balance" name="balance">
+    <br>
+    <br>
+    <label for="annualRate">Annual Rate:</label>
+    <input type="text" id="annualRate" name="annualRate">
+    <br>
+    <br>
+    <label for="months">Months:</label>
+    <input type="text" id="months" name="months">
+    <br>
+    <br>
+    <button type="button" onclick="futureValue()">Future Value</button>
+    <div id="output"></div>
+    <script>
+        "use strict";
+
+        /**
+         * Input: 
+         *      An amount to invest: balance
+         *      The annual rate of growth: annualRate
+         *      The number of months to invest: numMonths
+         * Processing:
+         *      Use a loop to compute the balance of an account after a bank has paid interest for numMonths number of months.
+         * Output:
+         *      The balance after numMonths have passed.
+         */
+
+        function futureValue() {
+            let balance = parseFloat(document.getElementById('balance').value);
+            let annualRate = parseFloat(document.getElementById('annualRate').value);
+            let numMonths = parseFloat(document.getElementById('months').value);
+            let monthlyRate = annualRate / 12;
+
+            // For each month, compute the interest and add it to the balance.
+            for (let month = 1; month <= numMonths; month++) {
+                // Compute the interest for a month
+                let interest = balance * monthlyRate;
+
+                // Round the interest to pennies.
+                interest = Math.round(interest * 100) / 100;
+
+                // Add the interest to the balance.
+                balance += interest;
+            }
+
+            // Display the resulting balance for the user to see.
+            document.getElementById('output').innerHTML = `Your balance after ${numMonths} months will be $${balance}`;
+        }
+    </script>
+</body>
+
+</html>
