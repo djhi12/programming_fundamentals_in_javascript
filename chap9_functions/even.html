@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Is Even</title>
+    <title>Is Even | Example 10</title>
 </head>
+
 <body>
+    <button type="button" onclick="doInputOutput()">Integer:</button>
+
     <script>
         "use strict";
 
@@ -14,10 +18,10 @@
          * Input: An integer
          * Processing: Determine if the integer is even or not
          * Output: A message stating if the integer is even or not
-        */
+         */
 
         function doInputOutput() {
-            let number = 2;
+            let number = 201;
             let result = isEven(number);
             console.log(`${number} is even ${result}`);
         }
@@ -26,8 +30,9 @@
         // integer: otherwise returns false.
         function isEven(number) {
             return (number % 2) == 0;
+            console.log(number);
         }
-
     </script>
 </body>
+
 </html>
