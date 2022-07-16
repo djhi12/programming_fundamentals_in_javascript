@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integer</title>
+    <style>
+        main {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Problem -->
+        <h1>Problem</h1>
+        <p>Write a defining table and program that reads an integer n from the keyboard and then displays the word
+            “sunshine” n times in a div.</p>
+        <label for="integer">Enter:</label>
+        <input type="text" id="integer" name="integer">
+        <br>
+        <br>
+        <button type="button" onclick="integer()">Integer</button>
+        <div id="output"></div>
+        <script>
+            "use strict";
+
+            function integer() {
+                let integer = parseInt(document.getElementById('integer').value);
+                let message = ' ' + '<br>';
+                for (let i = 1; i < integer; i++) {
+                    // console.log(message);
+                    message += `Sunshine ${i} <br>`;
+                    document.getElementById('output').innerHTML = message;
+                }
+                // console.log(message);
+
+                // document.getElementById('output').innerHTML = message;
+            }
+        </script>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+
+<body>
+    <label for="integerBox">Enter:</label>
+    <input type="text" id="integerBox" name="integerBox">
+    <br>
+    <br>
+    <button type="button" onclick="isPrime()">Prime number</button>
+    <div id="outputDiv"></div>
+    <script>
+        "use strict";
+
+        function isPrime() {
+            let candidate = parseInt(document.getElementById('integerBox').value);
+
+            // Count the number of factors that evenly divide candidate.
+            let factorCount = 0;
+            for (let divisor = 1; divisor <= candidate; divisor++) {
+                let remainder = candidate % divisor;
+                if (remainder == 0) {
+                    factorCount++;
+                }
+            }
+
+            // Determine the output and show it ot the user.
+            let output;
+            if (factorCount == 2) {
+                output = `${candidate} is prime`;
+            } else {
+                output = `${candidate} is not prime`;
+            }
+
+            document.getElementById('outputDiv').innerHTML = output;
+        }
+    </script>
+</body>
+
+</html>

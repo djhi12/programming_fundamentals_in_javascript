@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories | Example 5</title>
+</head>
+<body>
+    <button type="button" onclick="testCalories()">Calories</button>
+    <div id="output"></div>
+    <script>
+        "use strict";
+
+        function testCalories() {
+            let dist = 2000;
+            let elev = 750;
+            let weight = 72.6;
+
+            // Call the computeCaloriesBurned function.
+            calories = testCalories(dist, elev, weight);
+
+            // Display the calories for the user to see.
+            document.getElementById('output').innerHTML = calories;
+        }
+    </script>
+</body>
+</html>
