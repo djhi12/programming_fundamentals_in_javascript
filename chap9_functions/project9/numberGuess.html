@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guess Game</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function numberGuessGame() {
+            let message =
+                `I'm thinking of a number between 1 and 100. \n Try to guess it. \n Please enter an integer between 1 and 100.`;
+            let answer = 38;
+            let guess;
+
+            do {
+                guess = parseInt(prompt(message));
+                if (guess < answer) {
+                    message = `${guess} is too low. Please enter another integer.`;
+                } else if (guess > answer) {
+                    message = ``
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
