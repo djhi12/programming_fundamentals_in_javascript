@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area | Example 11</title>
+</head>
+<body>
+    <button type="button" onclick="testTriangle()">Test</button>
+    <script>
+        "use strict";
+
+        /**
+         * Input: No user input
+         * Processing: Compute the area of a triangle with side lengths 4, 2, and 5
+         * Output: The area of the triangle
+        */
+
+        function testTriangle() {
+            let areas = triangleArea(4, 2, 5);
+            let cubic = cubicArea(3, 4, 6);
+            let totalAreas = areas + cubic;
+            console.log(totalAreas);
+        }
+
+        // Computes and returns the area of a triangle with side lengths a, b, c.
+        function triangleArea(a, b, c) {
+            let s = (a + b + c) / 2;
+            let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            return area;
+            console.log(area);
+        }
+
+        function cubicArea(c, d, f) {
+            let n = c + d + f;
+            return n;
+        } 
+    </script>
+</body>
+</html>
